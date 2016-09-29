@@ -1,0 +1,211 @@
+
+
+
+section.top {
+  position: relative;
+  height: 100vh;
+  background: no-repeat center 0 / cover;
+ background-attachment: fixed;
+
+&>.wrapper {
+  @extend %flex;
+  height: 100%;
+
+  header {
+    @extend %flex;
+    flex-basis: 100%;
+    justify-content: space-between;
+    align-self: flex-start;
+
+    .logo {
+      display: block;
+      width: 140px;
+      height: 74px;
+      background-color: #FA5C65;
+      text-decoration: none;
+      position: relative;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      .logo_text {
+        text-align: center;
+         color:white;
+        font-family: bernier;
+        font-size: 1.5rem;
+        position: absolute;
+        top:15px;
+        left: 0;
+        right: 0;
+
+      }
+    }
+      nav {
+        ul {
+          @extend %ul, %flex;
+
+          li {
+            margin-left: 30px;
+
+            a {
+              color: #263742;
+              font-family: bernier_distressed;
+              font-size: 24px;
+              font-weight: 400;
+              line-height: 85px;
+              text-transform: uppercase;
+              text-decoration: none;
+            &:hover {
+              color: #fa5c65;
+            }
+            }
+           &.social {
+             a {
+               width: 25px;
+               height: 25px;
+               display: inline-block;
+               background: url("../img/Social-Icons.png") no-repeat;
+               transition: all 0.3s ease;
+               margin-top: 30px;
+               &:hover{
+
+               }
+
+               &.tw{
+                 background-position: 0 0;
+               }
+               &.fb{
+                 background-position: 100% 0;
+               }
+             }
+           }
+          }
+        }
+      }
+  }
+
+
+  .sloganCont{
+    max-width: 58%;
+
+    h1{
+      font-family: $Montserrat;
+      font-size: 48px;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin: 0;
+      color: $gray ;
+    }
+    h4{
+      position: relative;
+      color: $gray;
+      font-family: $OpenSans;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 40px;
+      margin: 20px 0 60px 0;
+    }
+    .btn {
+      position: relative;
+      display: block;
+      text-decoration: none;
+      background: $red;
+      width: 170px;
+      height: 60px;
+      border-radius: 10%;
+    }
+      .btn_text{
+        color: white;
+        font-family: $OpenSans;
+        font-size: 15px;
+        font-weight: 700;
+        padding: 19px 44px;
+
+    }
+  }
+
+
+  }
+}
+
+section.snippets {
+
+  position: relative;
+
+  & > .wrapper {
+
+    & > ul {
+      @extend %ul, %flex;
+      margin: 80px 0;
+
+      li {
+        width: (100%/3);
+        box-sizing: border-box;
+        padding-right: 55px;
+
+       h3 {
+         font-family: $Montserrat;
+         font-size: 1.5rem;
+         font-weight: 700;
+         text-transform: uppercase;
+         color:$gray;
+       }
+
+        .descr {
+          color: $lightGray;
+          font-family: $OpenSans;
+          font-size: 15px;
+          font-weight: 400;
+        }
+          & > a {
+         @extend %more;
+        }
+      }
+    }
+  }
+}
+
+section.portfolio{
+  margin: 80px 0;
+
+  &>.wrapper{
+    @extend %flex;
+    justify-content: space-between;
+
+    &>.col{
+      width: 49%;
+
+      &:first-of-type{
+        img{
+          max-width: 100%;
+        }
+      }
+      &:nth-of-type(2){
+        align-self: center;
+      }
+
+      h2{
+        font-family: $Montserrat;
+        font-size: 40px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: $gray;
+        margin: 0;
+      }
+      h4{
+        color: $gray;
+        font-family: $OpenSans;
+        font-size: 16px;
+        font-weight: 400;
+      }
+      .descr{
+        color: $lightGray;
+        font-family: $OpenSans;
+        font-size: 15px;
+        font-weight: 400;
+      }
+
+      &> .more {
+        @extend %more;
+      }
+      }
+  }
+}

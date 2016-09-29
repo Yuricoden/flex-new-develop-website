@@ -1,0 +1,126 @@
+section.team{
+ .wrapper{
+   max-width: $maw;
+   margin:0 auto ;
+   position: relative;
+    .row1{
+      h2{
+        font-family: $Montserrat;
+        font-size: 32px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: $gray;
+        margin: 0;
+      }
+      h3{
+        color: $lightGray;
+        font-family: $OpenSans;
+        font-size: 16px;
+        font-weight: 400;
+        margin: 0;
+      }
+    }
+    .row2{
+      @extend %flex, %ul;
+      margin-top: 30px;
+
+      li{
+        @extend %flex;
+        width: (100% / 3);
+        padding-right: 35px;
+        box-sizing: border-box;
+
+        .col1{
+          width: 128px;
+          height: 128px;
+          border-radius: 50%;
+          background: no-repeat center / cover;
+        }
+        .col2{
+          width: calc(100% - 128px);
+          padding-left: 20px;
+          box-sizing: border-box;
+
+          h3{
+            color: $gray;
+            font-family: $Montserrat;
+            font-size: 22px;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin: 0;
+
+          }
+          h4{
+            color: $red;
+            font-family: $OpenSans;
+            font-size: 14px;
+            font-weight: 400;
+            margin: 0;
+          }
+          .descr{
+            color: $lightGray;
+            font-family: $OpenSans;
+            font-size: 14px;
+            font-weight: 400;
+            margin-top: 10px;
+          }
+        }
+      }
+    }
+    .more{
+      @extend %more;
+      text-align: right;
+    }
+
+  }
+}
+
+
+.footer {
+  @extend .wrapper, %flex;
+  margin-top: 80px;
+  min-height: 90px;
+  justify-content: space-between;
+  border-top: 1px solid #e3e3e3;
+ align-items: center;
+  .col1 {
+    a.tw {
+      display: inline-block;
+      width: 21px;
+      height: 21px;
+      margin-right: 20px;
+      background: url("../img/twitter.png") no-repeat;
+    }
+   a.ins {
+     display: inline-block;
+     width: 21px;
+     height: 21px;
+     margin-right: 20px;
+     background: url("../img/insta.png") no-repeat;
+   }
+     a.fb {
+       display: inline-block;
+       width: 21px;
+       height: 21px;
+       margin-right: 20px;
+       background: url("../img/face.png") no-repeat;
+     }
+       a.gp {
+         display: inline-block;
+         width: 21px;
+         height: 21px;
+         margin-right: 20px;
+         background: url("../img/goo.png") no-repeat;
+
+       }
+     }
+
+.col2 {
+  color: $lightGray;
+  font-family: $OpenSans;
+  font-size: 1rem;
+  font-weight:400;
+
+}
+
+}
